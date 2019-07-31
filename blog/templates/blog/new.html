@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Yas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">Blog</a>
+            <a class="nav-item nav-link" href="#">Yas</a>
+            <a class="nav-item nav-link" href="#">글쓰기</a>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container">
+	    <form action="{% url 'create'%}">
+    	  <h4>제목: </h4>
+	      <input type="text" name="title">
+	      <br>
+	      <br>
+	      <h4>본문: </h4>
+	      <textarea cols=40 rows=10 name="body"></textarea>
+	      <br>
+	      <br>
+	    <input class="btn btn-dark" type="submit" value="제출하기">
+    </form>
+</div>
+
+</body>
+{% endblock %}
